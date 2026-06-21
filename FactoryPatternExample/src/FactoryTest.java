@@ -2,12 +2,16 @@ public class FactoryTest {
 
     public static void main(String[] args) {
 
-        ShapeFactory factory = new ShapeFactory();
+        DocumentFactory wordFactory = new WordFactory();
+        Document word = wordFactory.createDocument();
+        word.open();
 
-        Shape s1 = factory.getShape("CIRCLE");
-        s1.draw();
+        DocumentFactory pdfFactory = new PdfFactory();
+        Document pdf = pdfFactory.createDocument();
+        pdf.open();
 
-        Shape s2 = factory.getShape("RECTANGLE");
-        s2.draw();
+        DocumentFactory excelFactory = new ExcelFactory();
+        Document excel = excelFactory.createDocument();
+        excel.open();
     }
 }
