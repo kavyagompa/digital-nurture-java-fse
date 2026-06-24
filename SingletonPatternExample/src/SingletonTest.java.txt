@@ -1,0 +1,17 @@
+public class SingletonTest {
+   public SingletonTest() {
+   }
+
+   public static void main(String[] var0) {
+      Logger var1 = Logger.getInstance();
+      Logger var2 = Logger.getInstance();
+      var1.log("Application Started");
+      var2.log("User Logged In");
+      if (var1 == var2) {
+         System.out.println("Only one Logger instance exists.");
+      } else {
+         System.out.println("Multiple Logger instances exist.");
+      }
+
+   }
+}
