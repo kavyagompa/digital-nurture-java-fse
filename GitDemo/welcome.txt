@@ -1,1 +1,1 @@
-Welcome tp Git
+Welcome to Git
