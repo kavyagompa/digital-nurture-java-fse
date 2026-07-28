@@ -1,0 +1,12 @@
+<h1>Courses From NgRx Store</h1>
+
+@for(course of courses$ | async; track course.name)
+{
+  <div>
+    <h3>{{course.name}}</h3>
+
+    <p>
+      Duration: {{course.duration}} hours
+    </p>
+  </div>
+}

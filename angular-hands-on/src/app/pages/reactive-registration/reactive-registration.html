@@ -1,0 +1,50 @@
+<h1>Reactive Student Registration</h1>
+
+<form [formGroup]="studentForm" (ngSubmit)="submitForm()">
+
+  <label>Name:</label>
+  <input 
+    type="text"
+    formControlName="name">
+
+  <br><br>
+
+  <label>Email:</label>
+  <input 
+    type="email"
+    formControlName="email">
+
+  <br><br>
+
+  <label>Course:</label>
+
+  <select formControlName="course">
+
+    <option>Angular</option>
+    <option>Java Full Stack</option>
+    <option>React</option>
+
+  </select>
+
+  <br><br>
+
+  <button type="submit">
+    Submit
+  </button>
+
+</form>
+
+
+<h3>Form Data Preview</h3>
+
+<p>
+Name: {{ studentForm.value.name }}
+</p>
+
+<p>
+Email: {{ studentForm.value.email }}
+</p>
+
+<p>
+Course: {{ studentForm.value.course }}
+</p>
